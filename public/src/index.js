@@ -11,7 +11,7 @@ const App = (props) => {
     return(
         <div className="app">
             <Header/>
-            <Link to="/">Home</Link>
+            <Link to="/">Home</Link> &nbsp;
             {props.children}
         </div>
     )

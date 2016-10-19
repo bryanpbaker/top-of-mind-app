@@ -56,15 +56,11 @@
 
 	var _reactRouter = __webpack_require__(159);
 
-	var _component_header = __webpack_require__(222);
+	var _headerComponent = __webpack_require__(222);
 
-	var _component_header2 = _interopRequireDefault(_component_header);
+	var _headerComponent2 = _interopRequireDefault(_headerComponent);
 
-	var _component_test = __webpack_require__(223);
-
-	var _component_test2 = _interopRequireDefault(_component_test);
-
-	__webpack_require__(224);
+	__webpack_require__(223);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -73,18 +69,13 @@
 	    return _react2.default.createElement(
 	        'div',
 	        { className: 'app' },
-	        _react2.default.createElement(_component_header2.default, null),
+	        _react2.default.createElement(_headerComponent2.default, null),
 	        _react2.default.createElement(
 	            _reactRouter.Link,
 	            { to: '/' },
 	            'Home'
 	        ),
-	        '   ',
-	        _react2.default.createElement(
-	            _reactRouter.Link,
-	            { to: 'test' },
-	            'Test Route'
-	        ),
+	        '  ',
 	        props.children
 	    );
 	};
@@ -92,11 +83,7 @@
 	_reactDom2.default.render(_react2.default.createElement(
 	    _reactRouter.Router,
 	    { history: _reactRouter.browserHistory },
-	    _react2.default.createElement(
-	        _reactRouter.Route,
-	        { path: '/', component: App },
-	        _react2.default.createElement(_reactRouter.Route, { path: 'test', component: _component_test2.default })
-	    )
+	    _react2.default.createElement(_reactRouter.Route, { path: '/', component: App })
 	), document.querySelector('.container'));
 
 /***/ },
@@ -25373,7 +25360,7 @@
 	        _react2.default.createElement(
 	            "h1",
 	            null,
-	            "The Ground Up React/Redux"
+	            "Top of Mind App"
 	        )
 	    );
 	};
@@ -25384,46 +25371,15 @@
 /* 223 */
 /***/ function(module, exports, __webpack_require__) {
 
-	"use strict";
-
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-
-	var _react = __webpack_require__(1);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	var Test = function Test() {
-
-	    return _react2.default.createElement(
-	        "div",
-	        { className: "test-component" },
-	        _react2.default.createElement(
-	            "h2",
-	            null,
-	            "Test Component"
-	        )
-	    );
-	};
-
-	exports.default = Test;
-
-/***/ },
-/* 224 */
-/***/ function(module, exports, __webpack_require__) {
-
 	'use strict';
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(225);
+	var content = __webpack_require__(224);
 	if (typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(227)(content, {});
+	var update = __webpack_require__(226)(content, {});
 	if (content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if (false) {
@@ -25442,10 +25398,10 @@
 	}
 
 /***/ },
-/* 225 */
+/* 224 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(226)();
+	exports = module.exports = __webpack_require__(225)();
 	// imports
 
 
@@ -25456,7 +25412,7 @@
 
 
 /***/ },
-/* 226 */
+/* 225 */
 /***/ function(module, exports) {
 
 	/*
@@ -25512,7 +25468,7 @@
 
 
 /***/ },
-/* 227 */
+/* 226 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/*
